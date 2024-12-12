@@ -1,0 +1,88 @@
+.nav_area{
+    position: relative;
+}
+.nav_link::after{
+    content: "";
+    height: 4px;
+    width: 0%;
+    background-color: black;
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.2s;
+    z-index: 1;
+}
+.nav_link:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+/* drop-down css start here */
+ul li > .dropdown{
+    display: none;
+    position: absolute;
+}
+ul li:hover > .dropdown{
+    display: block;
+    background-color: white;
+    width: 180px;
+    border-radius: 5px;
+}
+ul li:hover > .dropdown li{
+    padding: 15px;
+}
+.img_rotate{
+    display: none;
+}
+.img_area:hover .img_rotate{
+    display: block;
+}
+.img_area:hover .shoes{
+    display: none;
+}
+
+/* .icon-1{
+    display: none;
+} */
+ .zoomImg:hover{
+    transform: scale(1.1);
+ }
+ .heart{
+    opacity: 0;
+ }
+ .product_cart .shop_now_btn, .circle, .heart, .shoes_size{
+    opacity: 0;
+ }
+ .product_cart:hover .shop_now_btn, .product_cart:hover .circle, .product_cart:hover .heart, .product_cart:hover .shoes_size{
+    opacity: 1;
+ }
+ .animate-scale img{
+    transition: transform 0.8s ease;
+    filter: 0.8s ease;
+ }
+ .animate-scale img:hover{
+    transform: scale(1.1);
+    filter: brightness(0.7);
+ }
+ /* customer review start here */
+.carousel-inner{
+    transition: transform 0.5s ease-in-out;
+}
+.reviews-carousel{
+min-width: 100%;
+box-sizing: border-box;
+}
+.reviews-button{
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+.prvSlide{
+    left: 0px;
+}
+.nextSlide{
+    right: 0px;
+}
